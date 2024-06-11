@@ -1,11 +1,11 @@
-name: Deploy Terraform state bucket
+name: deploy terraform state bucket
 
 on:
   workflow_dispatch:
 
 jobs:
   deploy:
-    name: Deploy Terraform state bucket
+    name: deploy terraform state bucket
     runs-on: ubuntu-latest
 
     defaults:
@@ -13,10 +13,10 @@ jobs:
         shell: bash
 
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v2
 
-      - name: Deploy state bucket
+      - name: deploy state bucket
         run: |
           set -a 
           source .env.backend
